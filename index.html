@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>openUPI - Professional UPI QR Scanner</title>
+</head>
+<body style="font-family: Arial, sans-serif; line-height: 1.6; max-width: 900px; margin: auto; padding: 20px;">
+
+  <h1>📱 openUPI - Professional UPI QR Scanner</h1>
+
+  <div align="center">
+    <img src="android/mipmap-xxxhdpi/ic_launcher.png" alt="openUPI Logo" style="width:120px;"/>
+
+    <p><b>A fast, professional UPI QR code scanner for Android with native app integration</b></p>
+
+    <p>
+      <a href="https://android.com">
+        <img src="https://img.shields.io/badge/Platform-Android-green.svg" alt="Android"/>
+      </a>
+      <a href="https://android-arsenal.com/api?level=24">
+        <img src="https://img.shields.io/badge/API-24%2B-brightgreen.svg" alt="API"/>
+      </a>
+      <a href="LICENSE">
+        <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License"/>
+      </a>
+    </p>
+
+    <p>
+      <a href="#-features">Features</a> • 
+      <a href="#-screenshots">Screenshots</a> • 
+      <a href="#-installation">Installation</a> • 
+      <a href="#-building">Building</a> • 
+      <a href="#-usage">Usage</a> • 
+      <a href="#-contributing">Contributing</a>
+    </p>
+  </div>
+
+  <h2 id="-features">✨ Features</h2>
+
+  <h3>🎯 Core Functionality</h3>
+  <ul>
+    <li><b>Instant Camera Launch</b> - Opens camera immediately on app start</li>
+    <li><b>Real-time QR Scanning</b> - Continuous scanning with ZXing library</li>
+    <li><b>UPI Detection</b> - Automatically detects UPI payment links (<code>upi://pay</code>)</li>
+    <li><b>Native App Chooser</b> - Seamlessly integrates with Android's app selection</li>
+    <li><b>Gallery Scanning</b> - Scan QR codes from saved images</li>
+    <li><b>Multi-format Support</b> - Handles various UPI QR code formats</li>
+  </ul>
+
+  <h3>🎨 Professional UI</h3>
+  <ul>
+    <li><b>Modern Design</b> - Clean, intuitive interface</li>
+    <li><b>Blue Corner Brackets</b> - Professional scanning frame</li>
+    <li><b>Top Toolbar</b> - Gallery access and flash controls</li>
+    <li><b>Bottom Controls</b> - Zoom slider and quick zoom buttons</li>
+    <li><b>Visual Feedback</b> - Clear status messages and animations</li>
+  </ul>
+
+  <h3>📷 Camera Controls</h3>
+  <ul>
+    <li><b>Flash Toggle</b> - Turn camera flash on/off</li>
+    <li><b>Zoom Controls</b> - Slider and buttons for precise zoom</li>
+    <li><b>Auto-focus</b> - Continuous focus for sharp QR detection</li>
+    <li><b>Camera Resume</b> - Automatic camera restart after UPI transactions</li>
+  </ul>
+
+  <h3>🔒 Privacy & Permissions</h3>
+  <ul>
+    <li><b>Minimal Permissions</b> - Only camera and storage (for gallery)</li>
+    <li><b>No Data Collection</b> - Completely offline operation</li>
+    <li><b>Secure Processing</b> - QR codes processed locally</li>
+  </ul>
+
+  <h2 id="-screenshots">📸 Screenshots</h2>
+
+  <table>
+    <tr>
+      <th>Home Screen</th>
+      <th>Scanning</th>
+      <th>UPI App Chooser</th>
+      <th>Gallery Selection</th>
+    </tr>
+    <tr>
+      <td><img src="screenshots/home.png" alt="Home" width="200"/></td>
+      <td><img src="screenshots/scanning.png" alt="Scanning" width="200"/></td>
+      <td><img src="screenshots/chooser.png" alt="Chooser" width="200"/></td>
+      <td><img src="screenshots/gallery.png" alt="Gallery" width="200"/></td>
+    </tr>
+  </table>
+
+  <h2 id="-installation">📥 Installation</h2>
+
+  <h3>Option 1: Download APK</h3>
+  <ol>
+    <li>Download the latest APK from <a href="../../releases">Releases</a></li>
+    <li>Enable "Install from unknown sources" in Android settings</li>
+    <li>Install the APK file</li>
+  </ol>
+
+  <h3>Option 2: Build from Source</h3>
+  <pre><code>git clone https://github.com/yourusername/openUPI.git
+cd openUPI
+./gradlew assembleDebug
+</code></pre>
+
+  <h2 id="-building">🛠 Building</h2>
+
+  <h3>Prerequisites</h3>
+  <ul>
+    <li><b>Android Studio</b> 4.0+ or Android SDK</li>
+    <li><b>Java</b> 8+ or OpenJDK</li>
+    <li><b>Gradle</b> 8.0+ (included via wrapper)</li>
+    <li><b>Android SDK</b> API 24+ (Android 7.0)</li>
+  </ul>
+
+  <h3>Build Commands</h3>
+  <pre><code># Debug build (for testing)
+./gradlew assembleDebug
+
+# Release build (for distribution)
+./gradlew assembleRelease
+
+# Clean build
+./gradlew clean assembleDebug
+
+# Install on connected device
+./gradlew installDebug
+</code></pre>
+
+  <h3>Build Outputs</h3>
+  <ul>
+    <li><b>Debug APK:</b> <code>app/build/outputs/apk/debug/app-debug.apk</code></li>
+    <li><b>Release APK:</b> <code>app/build/outputs/apk/release/app-release.apk</code></li>
+  </ul>
+
+  <h2>📱 Technical Specifications</h2>
+  <table border="1" cellspacing="0" cellpadding="6">
+    <tr><th>Specification</th><th>Details</th></tr>
+    <tr><td><b>Package Name</b></td><td><code>com.openupi.app</code></td></tr>
+    <tr><td><b>Minimum Android</b></td><td>7.0 (API 24)</td></tr>
+    <tr><td><b>Target Android</b></td><td>14 (API 34)</td></tr>
+    <tr><td><b>Architecture</b></td><td>ARM64, ARM, x86, x86_64</td></tr>
+    <tr><td><b>Size</b></td><td>~3.6 MB</td></tr>
+    <tr><td><b>Permissions</b></td><td>Camera, Storage (optional)</td></tr>
+  </table>
+
+  <h2 id="-usage">🚀 Usage</h2>
+
+  <h3>Basic Operation</h3>
+  <ol>
+    <li><b>Launch App</b> → Camera starts immediately</li>
+    <li><b>Point at QR Code</b> → Blue brackets guide alignment</li>
+    <li><b>UPI Detected</b> → Native Android app chooser appears</li>
+    <li><b>Select UPI App</b> → Complete payment in chosen app</li>
+    <li><b>Return to Scanner</b> → Ready for next scan</li>
+  </ol>
+
+  <h3>Advanced Features</h3>
+  <ul>
+    <li><b>Gallery Scanning:</b> Tap gallery icon to scan saved QR images</li>
+    <li><b>Flash Control:</b> Toggle flash for low-light scanning</li>
+    <li><b>Zoom Control:</b> Use slider or buttons for precise zoom</li>
+    <li><b>Continuous Scanning:</b> Automatically resumes after each scan</li>
+  </ul>
+
+  <h3>Supported UPI Formats</h3>
+  <pre><code>upi://pay?pa=merchant@bank&pn=Name&am=100
+</code></pre>
+  <p>QR codes with UPI parameters (<code>pa=</code>, <code>pn=</code>, <code>mc=</code>)<br>
+  Standard UPI payment links from all major providers</p>
+
+  <h2>🏗 Architecture</h2>
+
+  <h3>Project Structure</h3>
+  <pre><code>openUPI/
+├── app/
+│   ├── src/main/
+│   │   ├── java/com/openupi/app/
+│   │   │   └── MainActivity.java          # Main activity
+│   │   ├── res/
+│   │   │   ├── layout/
+│   │   │   │   └── activity_main.xml      # UI layout
+│   │   │   ├── drawable/                  # Icons and graphics
+│   │   │   ├── mipmap-*/                  # App icons (all densities)
+│   │   │   └── values/                    # Colors, strings, themes
+│   │   └── AndroidManifest.xml            # App configuration
+│   └── build.gradle                       # App dependencies
+├── gradle/                                # Gradle wrapper
+├── android/                               # Source PNG icons
+└── README.md                              # This file
+</code></pre>
+
+  <h3>Key Dependencies</h3>
+  <ul>
+    <li><b>ZXing Android Embedded</b> 4.1.0 - QR code scanning</li>
+    <li><b>AndroidX AppCompat</b> 1.6.1 - UI components</li>
+    <li><b>AndroidX Core</b> 1.12.0 - Core Android features</li>
+  </ul>
+
+  <h2>🎨 Customization</h2>
+
+  <h3>Changing Colors</h3>
+  <pre><code>&lt;color name="ic_launcher_background"&gt;#F5F5F5&lt;/color&gt;
+</code></pre>
+
+  <h3>Modifying UI</h3>
+  <p>Edit <code>app/src/main/res/layout/activity_main.xml</code> for layout changes.</p>
+
+  <h3>App Icon</h3>
+  <p>Replace PNG files in <code>app/src/main/res/mipmap-*/</code> directories.</p>
+
+  <h2 id="-contributing">🤝 Contributing</h2>
+  <ol>
+    <li><b>Fork</b> the repository</li>
+    <li><b>Create</b> a feature branch (<code>git checkout -b feature/amazing-feature</code>)</li>
+    <li><b>Commit</b> your changes (<code>git commit -m 'Add amazing feature'</code>)</li>
+    <li><b>Push</b> to the branch (<code>git push origin feature/amazing-feature</code>)</li>
+    <li><b>Open</b> a Pull Request</li>
+  </ol>
+
+  <h3>Development Guidelines</h3>
+  <ul>
+    <li>Follow Android development best practices</li>
+    <li>Test on multiple devices and Android versions</li>
+    <li>Maintain backward compatibility with API 24+</li>
+    <li>Add appropriate comments and documentation</li>
+  </ul>
+
+  <h2>📄 License</h2>
+  <p>This project is licensed under the MIT License - see the <a href="LICENSE">LICENSE</a> file for details.</p>
+
+  <h2>🙏 Acknowledgments</h2>
+  <ul>
+    <li><b>ZXing Team</b> - For the excellent QR code scanning library</li>
+    <li><b>Android Community</b> - For continuous support and resources</li>
+    <li><b>UPI Ecosystem</b> - For enabling seamless digital payments in India</li>
+  </ul>
+
+  <h2>📞 Support</h2>
+  <ul>
+    <li><b>Issues:</b> <a href="../../issues">GitHub Issues</a></li>
+    <li><b>Discussions:</b> <a href="../../discussions">GitHub Discussions</a></li>
+    <li><b>Email:</b> <a href="mailto:your-email@example.com">your-email@example.com</a></li>
+  </ul>
+
+  <h2>🔄 Changelog</h2>
+  <h3>v1.0.0 (Latest)</h3>
+  <ul>
+    <li>✅ Initial release</li>
+    <li>✅ Professional UI with zoom controls</li>
+    <li>✅ Gallery scanning support</li>
+    <li>✅ Native UPI app integration</li>
+    <li>✅ Flash and camera controls</li>
+    <li>✅ Multi-density app icons</li>
+  </ul>
+
+  <hr/>
+
+  <div align="center">
+    <p><b>Made with ❤️ for the Indian UPI ecosystem</b></p>
+    <p>
+      <a href="../../stargazers">⭐ Star this repo</a> • 
+      <a href="../../issues">🐛 Report bug</a> • 
+      <a href="../../issues">💡 Request feature</a>
+    </p>
+  </div>
+
+</body>
+</html>
